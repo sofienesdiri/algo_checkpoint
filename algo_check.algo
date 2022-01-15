@@ -1,0 +1,35 @@
+ALGORITHM string_counter
+VAR
+    char : CHAR;
+    count_char : INTEGER :=0;
+    count_word : INTEGER :=0;
+    count_vowels : INTEGER :=0;
+
+BEGIN
+
+REPEAT
+    Write("Add character")
+    Read(char)
+    count_char := count_char + 1
+    IF (char = ' ') THEN
+        count_word := count_word + 1
+    END_IF
+    SWITCH (char) DO
+        case 'a' : count_vowels:=count_vowels+1;
+        case 'e' : count_vowels:=count_vowels+1;
+        case 'y' : count_vowels:=count_vowels+1;
+        case 'u' : count_vowels:=count_vowels+1;
+        case 'i' : count_vowels:=count_vowels+1;
+        case 'o' : count_vowels:=count_vowels+1;
+        default : Break;
+    END_SWITCH    
+    
+UNTIL (char = '.')
+    count_char := count_char + 1 // because . is a char
+    
+    
+        
+    Write("number of character is ",count_char);
+    Write("number of word is ",count_word);
+    Write("number of vowels is ",count_vowels);
+END
