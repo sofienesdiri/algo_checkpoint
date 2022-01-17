@@ -11,7 +11,7 @@ REPEAT
     Write("Add character")
     Read(char)
     count_char := count_char + 1
-    IF (char = ' ') THEN
+    IF (char = ' ' OR char='.') THEN
         count_word := count_word + 1
     END_IF
     SWITCH (char) DO
@@ -21,6 +21,12 @@ REPEAT
         case 'u' : count_vowels:=count_vowels+1;
         case 'i' : count_vowels:=count_vowels+1;
         case 'o' : count_vowels:=count_vowels+1;
+        case 'A' : count_vowels:=count_vowels+1;
+        case 'E' : count_vowels:=count_vowels+1;
+        case 'Y' : count_vowels:=count_vowels+1;
+        case 'U' : count_vowels:=count_vowels+1;
+        case 'I' : count_vowels:=count_vowels+1;
+        case 'O' : count_vowels:=count_vowels+1;
         default : Break;
     END_SWITCH    
     
