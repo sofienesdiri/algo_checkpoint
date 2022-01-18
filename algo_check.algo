@@ -31,7 +31,7 @@ REPEAT
     END_SWITCH    
     
 UNTIL (char = '.')
-    count_char := count_char + 1 // because . is a char
+  
     
     
         
